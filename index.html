@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exploring Working Hours</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Exploring Working Hours">
+  <meta name="author" content="Fernando Hernandez">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Exploring Working Hours</h1>
+    <h2>per Week per Country from 1980 - 2007</h2>
+    <p>Fernando Hernandez<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Data Used</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Data courtesy of Gapminder / International Labour Organization</p>
+
+<ul>
+<li>Direct download at </li>
+<li><p><a href="http://spreadsheets.google.com/pub?key=rdCufG2vozTpKw7TBGbyoWw&amp;output=xls">http://spreadsheets.google.com/pub?key=rdCufG2vozTpKw7TBGbyoWw&amp;output=xls</a></p></li>
+<li><p>Gapminder Data</p></li>
+<li><p><a href="http://www.gapminder.org/data/">http://www.gapminder.org/data/</a></p></li>
+<li><p>Link to complete reference  </p></li>
+<li><p><a href="http://www.ilo.org/public/english/employment/strat/kilm/download.htm">http://www.ilo.org/public/english/employment/strat/kilm/download.htm</a></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>Currently running at</strong> <a href="https://fernando.shinyapps.io/WorkingHours/">https://fernando.shinyapps.io/WorkingHours/</a>  </p>
+
+<p>This app is intended to allow the user to explore the csv data that is publicly available.</p>
+
+<ul>
+<li>The linked csv is directly loaded and all processing is done server-side starting with the original csv file.</li>
+</ul>
+
+<p>Hours per week are defined as</p>
+
+<ul>
+<li>Total amount of yearly working hours divided by 52 weeks.</li>
+</ul>
+
+<p>The user can customize time series plots, boxplots, summary data, and a breakdown by decade.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Time Series Graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Customization includes</p>
+
+<ul>
+<li><p>Selecting the countries to plot.</p></li>
+<li><p>Custom quantile bars of distributions of means for all all countries each year. 
+(defaulted at middle 50% of the data)</p></li>
+<li><p>Values for each country (or median of all countries) can be added to the graph.</p></li>
+<li><p>Values are also stored in the Summary tab.</p></li>
+<li><p>Min/Max bars can be added which show the entire range of the means of each year for all countries.</p></li>
+<li><p>All graphs have the option to include a custom theme courtesy of the ggthemes package.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Summary Page</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>All values from world statistics and for each country which is selected are dynamically loaded here.</p></li>
+<li><p>Countries can be added or removed within this tab as well</p></li>
+<li><p>Currently it may take a bit of switching between tabs at first to generate initial Summary data.</p></li>
+<li><p>Blank values in country summaries represent NA values where no data was reported for that particular year and country.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Boxplots and Decades Graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Countries may be added to Boxplots.</p></li>
+<li><p>Custom themes can be added to either.</p></li>
+<li><p>Full Source Code is available at  </p></li>
+</ul>
+
+<ol>
+<li><a href="https://github.com/FCH808/GapminderHoursWorked">https://github.com/FCH808/GapminderHoursWorked</a>
+
+<ul>
+<li>Bugs or revisions may be submitted here</li>
+</ul></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Data Used'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Overview'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Time Series Graph'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Summary Page'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Boxplots and Decades Graph'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
